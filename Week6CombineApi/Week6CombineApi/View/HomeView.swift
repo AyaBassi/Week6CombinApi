@@ -8,25 +8,42 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = PlanetViewModel(combineNetworkManager: CombineNetworkManager())
+    @StateObject var planetViewModel = PlanetViewModel(combineNetworkManager: CombineNetworkManager())
     @State var searchText = ""
     var body: some View {
         NavigationStack {
             VStack {
                 
-                List(viewModel.results.filter({
-                    searchText.isEmpty ? true : $0.name.contains(searchText)
-                })){ result in
+                List(planetViewModel.fileteredResults){ result in
                     VStack{
-                        Text("Name: \(result.name)")
-                        Text("Population: \(result.population)" )
+                        NavigationLink {
+                            SwiftUIBookingPage(result: result, accountNumber: "", numberOfPeople: "")
+                        } label: {
+                            Text("Name: \(result.name)")
+                            Text("Population: \(result.population)" )
+                        }
                     }
                 }
             }.onAppear{
-                viewModel.getList(apiUrl: APIEndPoint.planetApi)
+                planetViewModel.getList(apiUrl: APIEndPoint.planetApi)
+            }.refreshable {
+                planetViewModel.getList(apiUrl: APIEndPoint.planetApi)
             }
-        .padding()
-        }.searchable(text: $searchText, placement:.toolbar, prompt: "Search")
+            .searchable(text: $searchText,
+                         placement: .navigationBarDrawer(displayMode: .always),
+                        prompt: "Search")
+            .onChange(of: searchText) { string in
+                print("typed: ",string)
+                planetViewModel.searchList(with: string)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Cancel Api") {
+                        planetViewModel.cancelApiCall()
+                    }
+                }
+            }
+        }
     }
 }
 

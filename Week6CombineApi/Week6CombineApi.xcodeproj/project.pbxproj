@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3990AD52A0A581B0049DFEF /* BookTravelToPlanetFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3990AD42A0A581B0049DFEF /* BookTravelToPlanetFacade.swift */; };
+		F3990AD82A0A60DB0049DFEF /* VisaPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3990AD72A0A60DB0049DFEF /* VisaPayment.swift */; };
+		F3990ADA2A0A61020049DFEF /* PaypalPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3990AD92A0A61020049DFEF /* PaypalPayment.swift */; };
+		F3990ADC2A0A61610049DFEF /* CheckAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3990ADB2A0A61610049DFEF /* CheckAvailability.swift */; };
+		F3990ADE2A0A61A70049DFEF /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3990ADD2A0A61A70049DFEF /* PaymentMethod.swift */; };
+		F3990AE02A0A62260049DFEF /* SwiftUIBookingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3990ADF2A0A62260049DFEF /* SwiftUIBookingPage.swift */; };
+		F3A4EF1B2A09AAA700F5DA79 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4EF1A2A09AAA700F5DA79 /* FakeNetworkManager.swift */; };
+		F3A4EF1D2A09B26E00F5DA79 /* PlanetList.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A4EF1C2A09B26E00F5DA79 /* PlanetList.json */; };
+		F3A4EF202A09B2D200F5DA79 /* EmptyPlanetList.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A4EF1F2A09B2D200F5DA79 /* EmptyPlanetList.json */; };
+		F3A4EF222A09B30D00F5DA79 /* PlanetListWithWrongPropertyName.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A4EF212A09B30D00F5DA79 /* PlanetListWithWrongPropertyName.json */; };
+		F3A4EF242A09B46500F5DA79 /* PlanetViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A4EF232A09B46500F5DA79 /* PlanetViewModelTests.swift */; };
 		F3B65FB12A054B3500FDC236 /* Week6CombineApiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B65FB02A054B3500FDC236 /* Week6CombineApiApp.swift */; };
 		F3B65FB32A054B3500FDC236 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B65FB22A054B3500FDC236 /* HomeView.swift */; };
 		F3B65FB52A054B3700FDC236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B65FB42A054B3700FDC236 /* Assets.xcassets */; };
@@ -40,6 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3990AD42A0A581B0049DFEF /* BookTravelToPlanetFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTravelToPlanetFacade.swift; sourceTree = "<group>"; };
+		F3990AD72A0A60DB0049DFEF /* VisaPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaPayment.swift; sourceTree = "<group>"; };
+		F3990AD92A0A61020049DFEF /* PaypalPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalPayment.swift; sourceTree = "<group>"; };
+		F3990ADB2A0A61610049DFEF /* CheckAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAvailability.swift; sourceTree = "<group>"; };
+		F3990ADD2A0A61A70049DFEF /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		F3990ADF2A0A62260049DFEF /* SwiftUIBookingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBookingPage.swift; sourceTree = "<group>"; };
+		F3A4EF1A2A09AAA700F5DA79 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
+		F3A4EF1C2A09B26E00F5DA79 /* PlanetList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlanetList.json; sourceTree = "<group>"; };
+		F3A4EF1F2A09B2D200F5DA79 /* EmptyPlanetList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptyPlanetList.json; sourceTree = "<group>"; };
+		F3A4EF212A09B30D00F5DA79 /* PlanetListWithWrongPropertyName.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlanetListWithWrongPropertyName.json; sourceTree = "<group>"; };
+		F3A4EF232A09B46500F5DA79 /* PlanetViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewModelTests.swift; sourceTree = "<group>"; };
 		F3B65FAD2A054B3500FDC236 /* Week6CombineApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week6CombineApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B65FB02A054B3500FDC236 /* Week6CombineApiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week6CombineApiApp.swift; sourceTree = "<group>"; };
 		F3B65FB22A054B3500FDC236 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -83,6 +105,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3990AD62A0A60A50049DFEF /* BookingTravelManager */ = {
+			isa = PBXGroup;
+			children = (
+				F3990AD42A0A581B0049DFEF /* BookTravelToPlanetFacade.swift */,
+				F3990AD72A0A60DB0049DFEF /* VisaPayment.swift */,
+				F3990AD92A0A61020049DFEF /* PaypalPayment.swift */,
+				F3990ADB2A0A61610049DFEF /* CheckAvailability.swift */,
+				F3990ADD2A0A61A70049DFEF /* PaymentMethod.swift */,
+			);
+			path = BookingTravelManager;
+			sourceTree = "<group>";
+		};
+		F3A4EF1E2A09B2A000F5DA79 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3A4EF1C2A09B26E00F5DA79 /* PlanetList.json */,
+				F3A4EF212A09B30D00F5DA79 /* PlanetListWithWrongPropertyName.json */,
+				F3A4EF1F2A09B2D200F5DA79 /* EmptyPlanetList.json */,
+				F3A4EF1A2A09AAA700F5DA79 /* FakeNetworkManager.swift */,
+				F3A4EF232A09B46500F5DA79 /* PlanetViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		F3B65FA42A054B3500FDC236 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +152,7 @@
 		F3B65FAF2A054B3500FDC236 /* Week6CombineApi */ = {
 			isa = PBXGroup;
 			children = (
+				F3990AD62A0A60A50049DFEF /* BookingTravelManager */,
 				F3B65FDD2A054B4E00FDC236 /* NetworkService */,
 				F3B65FDC2A054B4B00FDC236 /* Model */,
 				F3B65FDB2A054B4700FDC236 /* View */,
@@ -128,6 +175,7 @@
 		F3B65FC02A054B3700FDC236 /* Week6CombineApiTests */ = {
 			isa = PBXGroup;
 			children = (
+				F3A4EF1E2A09B2A000F5DA79 /* ViewModelTests */,
 				F3B65FC12A054B3700FDC236 /* Week6CombineApiTests.swift */,
 			);
 			path = Week6CombineApiTests;
@@ -154,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B65FB22A054B3500FDC236 /* HomeView.swift */,
+				F3990ADF2A0A62260049DFEF /* SwiftUIBookingPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A4EF1D2A09B26E00F5DA79 /* PlanetList.json in Resources */,
+				F3A4EF222A09B30D00F5DA79 /* PlanetListWithWrongPropertyName.json in Resources */,
+				F3A4EF202A09B2D200F5DA79 /* EmptyPlanetList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,13 +360,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3B65FE72A054CBE00FDC236 /* PlanetViewModel.swift in Sources */,
+				F3990AD52A0A581B0049DFEF /* BookTravelToPlanetFacade.swift in Sources */,
+				F3990ADA2A0A61020049DFEF /* PaypalPayment.swift in Sources */,
 				F3B65FE32A054C5800FDC236 /* NetworkErrorEnum.swift in Sources */,
 				F3B65FE52A054C8200FDC236 /* PlanetsModel.swift in Sources */,
 				F3B65FE12A054C2000FDC236 /* CombineNetworkManager.swift in Sources */,
 				F3B65FB32A054B3500FDC236 /* HomeView.swift in Sources */,
 				F3B65FDF2A054BDD00FDC236 /* CombineNetworkableProtocol.swift in Sources */,
+				F3990AE02A0A62260049DFEF /* SwiftUIBookingPage.swift in Sources */,
 				F3B65FB12A054B3500FDC236 /* Week6CombineApiApp.swift in Sources */,
 				F3B65FE92A054F8100FDC236 /* APIEndPoint.swift in Sources */,
+				F3990AD82A0A60DB0049DFEF /* VisaPayment.swift in Sources */,
+				F3990ADC2A0A61610049DFEF /* CheckAvailability.swift in Sources */,
+				F3990ADE2A0A61A70049DFEF /* PaymentMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3B65FC22A054B3700FDC236 /* Week6CombineApiTests.swift in Sources */,
+				F3A4EF242A09B46500F5DA79 /* PlanetViewModelTests.swift in Sources */,
+				F3A4EF1B2A09AAA700F5DA79 /* FakeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

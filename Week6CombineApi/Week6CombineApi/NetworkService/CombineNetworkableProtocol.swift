@@ -9,5 +9,5 @@ import Foundation
 
 import Combine
 protocol CombineNetworkableProtocol{
-    func getListFromAPI<T>(url:URL,type:T.Type) -> AnyPublisher<T,Error> where T : Decodable
+    func getListFromAPI<T>(url:URL) -> AnyPublisher<T,Error> where T : Decodable
 }

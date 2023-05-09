@@ -7,23 +7,21 @@
 
 import Foundation
 
-//struct PlanetsModelSuitableForUI: Decodable ,Identifiable{
-//    var id = UUID()
-//    let results : [Result]
-//}
-
-
 struct PlanetsModel: Decodable {
     let results : [Result]
 }
 
-struct Result: Decodable {
+struct Result: Decodable
+//,Identifiable
+{
+    //let id = UUID()
     let name:String
     let population:String
 }
 
-struct ResultForUI: Decodable,Identifiable {
-    let id:UUID
-    let name:String
-    let population:String
+extension Result :Identifiable{
+    var id: UUID {
+        return UUID()
+    }
 }
+
