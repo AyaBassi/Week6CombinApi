@@ -8,8 +8,10 @@
 import Foundation
 import Combine
 
-class CombineNetworkManager :CombineNetworkableProtocol{
+class CombineNetworkManager :NSObject,CombineNetworkableProtocol, URLSessionDelegate{
     func getListFromAPI<T>(url: URL) -> AnyPublisher<T, Error> where T:Decodable {
+        
+        
         return URLSession.shared.dataTaskPublisher(for: url)
             //.map{$0.data}
             //.delay(for: .seconds(2.0) , scheduler: DispatchQueue.main)

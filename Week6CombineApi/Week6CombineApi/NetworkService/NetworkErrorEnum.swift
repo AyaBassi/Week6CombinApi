@@ -18,13 +18,17 @@ enum NetworkErrorEnum :Error ,Equatable{
     case responseError
 }
 
-extension NetworkErrorEnum : LocalizedError {
+extension NetworkErrorEnum: LocalizedError {
     var errorDescription: String? {
         switch self {
-            case .dataNotFoundError:return NSLocalizedString("dataNotFoundError:", comment: "dataNotFoundError")
-        case .parsingError:                     return NSLocalizedString("Failed to parse API", comment: "NetworkErrorEnum.parsingError")
-        case .invalidUrlError:                  return NSLocalizedString("Invalid URL", comment: "NetworkErrorEnum.invalidUrlError")
-        case .responseError:                    return NSLocalizedString("Response Error", comment: "responseError")
+            case .dataNotFoundError:
+            return NSLocalizedString("dataNotFoundError:", comment: "dataNotFoundError")
+        case .parsingError:
+            return NSLocalizedString("Failed to parse API", comment: "NetworkErrorEnum.parsingError")
+        case .invalidUrlError:
+            return NSLocalizedString("Invalid URL", comment: "NetworkErrorEnum.invalidUrlError")
+        case .responseError:
+            return NSLocalizedString("Response Error", comment: "responseError")
         }
     }
 }

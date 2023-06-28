@@ -10,7 +10,7 @@ import Combine
 
 class PlanetViewModel:ObservableObject {
     
-    @Published var results : [Result] = []
+    @Published private var results : [Result] = []
     @Published var fileteredResults : [Result] = []
     let combineNetworkManager : CombineNetworkableProtocol
     private var cancellable = Set<AnyCancellable>()
@@ -33,7 +33,9 @@ class PlanetViewModel:ObservableObject {
                     switch error {
                     case is URLError :      self.customError = .invalidUrlError
                     case is DecodingError:  self.customError = .parsingError
-                    default:                self.customError = .dataNotFoundError
+                    default:
+                        let newError = error as? NetworkErrorEnum
+                        self.customError = newError == .parsingError ? .parsingError : .dataNotFoundError
                     }
                     print("Opps something went wrong: ",self.customError?.errorDescription ?? "Some error")
                 }
@@ -65,7 +67,6 @@ class PlanetViewModel:ObservableObject {
     }
     
     func travelToPlanet(numberOfPeople:Int,payment: (paymentMethod: PaymentMethodEnum, amount: Double, accountNumber: Int))->Bool{
-        
         let facade = BookTravelToPlanetFacade()
         return facade.bookTravel(numberOfPeople: numberOfPeople, payment: payment)
     }

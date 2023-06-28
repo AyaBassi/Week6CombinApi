@@ -21,10 +21,20 @@ struct SwiftUIBookingPage: View {
             Text(result.name)
             TextField("Account details", text: $accountNumber)
             TextField("Number of People", text: $numberOfPeople)
-            Button("Submit") {
+            
+            Button("Purchase using paypal") {
                 print(accountNumber)
                 guard let numberOfPeople = Int(numberOfPeople) , let accountNumber = Int(accountNumber) else {return}
                 if planetViewModel.travelToPlanet(numberOfPeople: Int(numberOfPeople), payment: (paymentMethod: .paypal, amount: 20.0, accountNumber: accountNumber))
+                {
+                    print("success booking")
+                }
+            }
+            
+            Button("Purchase using visa") {
+                print(accountNumber)
+                guard let numberOfPeople = Int(numberOfPeople) , let accountNumber = Int(accountNumber) else {return}
+                if planetViewModel.travelToPlanet(numberOfPeople: Int(numberOfPeople), payment: (paymentMethod: .visa, amount: 20.0, accountNumber: accountNumber))
                 {
                     print("success booking")
                 }

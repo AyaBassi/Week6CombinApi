@@ -14,6 +14,7 @@ import XCTest
 // check all variable names
 final class PlanetViewModelTests: XCTestCase {
     var planetViewModel: PlanetViewModel!
+    
     override func setUpWithError() throws {
         planetViewModel = PlanetViewModel(combineNetworkManager: FakeNetworkManager())
     }
@@ -69,7 +70,7 @@ final class PlanetViewModelTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + waitDuration){
             XCTAssertEqual(self.planetViewModel.fileteredResults.count, 0)
             XCTAssertNotNil(self.planetViewModel.customError)
-            //XCTAssertEqual(self.planetViewModel.customError,  NetworkErrorEnum.responseError)
+            XCTAssertEqual(self.planetViewModel.customError,  NetworkErrorEnum.parsingError)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: waitDuration)
@@ -80,7 +81,7 @@ final class PlanetViewModelTests: XCTestCase {
         let expectation = XCTestExpectation(description: "When we call getList ")
         let waitDuration = 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + waitDuration){
-            let name = self.planetViewModel.results[0].name
+            let name = self.planetViewModel.fileteredResults[0].name
             XCTAssertEqual(name, "Tatooine")
             expectation.fulfill()
         }
